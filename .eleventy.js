@@ -1,5 +1,9 @@
 module.exports = function(eleventyConfig) {
 
+  eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
+
   return {
     dir: {
       input: 'src',
@@ -8,4 +12,5 @@ module.exports = function(eleventyConfig) {
     dataTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk'
   };
+
 };
