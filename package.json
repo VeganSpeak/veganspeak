@@ -1,0 +1,19 @@
+{
+  "name": "veganspeak-org",
+  "version": "1.0.0",
+  "description": "A source of and guide to vegan arguments",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeganSpeak/veganspeak.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeganSpeak/veganspeak/issues"
+  },
+  "homepage": "https://github.com/VeganSpeak/veganspeak#readme"
+}
