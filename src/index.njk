@@ -13,7 +13,20 @@ layout: default
 		href="https://vomadlife.com/blogs/news/every-argument-against-veganism-debunked" target="_blank"
 		rel="noreferrer noopener">Every Argument Against Veganism DEBUNKED</a> by Benjamin McCormick and <a
 		href="https://veganfacts.info">veganfacts.info</a> for sharing their ideas and arguments.</p>
+
 <h3>Vegan Arguments</h3>
+
+<ol>
+	{% for post in arguments %}
+		<li>
+			<a href="{{ post.url | url }}">
+				{{ post.data.title }}
+			</a>
+			<p>{{ post.templateContent | striptags | truncate(90, true) }}</p>
+		</li>
+	{% endfor %}
+</ol>
+
 <ol>
 	<li>
 		<a href="#you-cant-be-100-vegan">
@@ -299,8 +312,8 @@ layout: default
 		little harm towards animals as possible.</p>
 	<p class="permalink">
 		<a href="arguments/you-cant-be-100-vegan/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -331,8 +344,8 @@ layout: default
 		our species forward by embracing this superior intelligence and ending all forms of animal exploitation.</p>
 	<p class="permalink">
 		<a href="arguments/top-of-the-food-chain/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -345,8 +358,8 @@ layout: default
 	<h4 id="eating-animals-is-necessary">
 		Eating animals is necessary</h4>
 	<p>Eating animals is not necessary. There are millions of vegans across the globe and from all paths of life
-		that lead perfectly healthy lives. In fact, the <a href="https://pubmed.ncbi.nlm.nih.gov/27886704/"
-			target="_blank" rel="noreferrer noopener">Academy of Nutrition and Dietetics</a>, the United States’ <a
+		that lead perfectly healthy lives. In fact, the <a href="https://pubmed.ncbi.nlm.nih.gov/27886704/" target="_blank"
+			rel="noreferrer noopener">Academy of Nutrition and Dietetics</a>, the United States’ <a
 			href="https://en.wikipedia.org/wiki/Academy_of_Nutrition_and_Dietetics" target="_blank"
 			rel="noreferrer noopener">largest organisation of food and nutrition professionals</a>, states the
 		following:</p>
@@ -366,19 +379,18 @@ layout: default
 			rel="noreferrer noopener">largest study ever on vegan nutrient profiles</a> found:</p>
 	<blockquote>“In strict vegetarians, low dietary intakes of vitamin B12
 		and D, calcium, and omega-3 fatty acids, in addition to iron and zinc,
-		have often been of concern <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R25"
-				target="_blank" rel="noreferrer noopener">25</a></sup>. In the present study, mean intakes of these
-		nutrients were above minimum requirements <sup><a
-				href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R26" target="_blank"
-				rel="noreferrer noopener">26</a></sup> in strict vegetarians.”</blockquote>
+		have often been of concern <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R25" target="_blank"
+				rel="noreferrer noopener">25</a></sup>. In the present study, mean intakes of these
+		nutrients were above minimum requirements <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R26"
+				target="_blank" rel="noreferrer noopener">26</a></sup> in strict vegetarians.”</blockquote>
 	<p>In a modern environment where one is not living in a state of survival there is quite simply <a
 			href="https://viva.org.uk/animals/number-animals-killed/" target="_blank" rel="noreferrer noopener">no
 			need to exploit and slaughter billions of sentient beings</a>. All necessary nutrients can be found in a
 		healthy vegan diet.</p>
 	<p class="permalink">
 		<a href="arguments/eating-animals-is-necessary/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -391,8 +403,8 @@ layout: default
 	<h4 id="eating-animals-is-natural">
 		Eating animals is natural</h4>
 	<p>It doesn’t matter if it’s natural, because this doesn’t imply eating meat is ethical or good. This is known
-		as an “<a href="https://yourlogicalfallacyis.com/appeal-to-nature" target="_blank"
-			rel="noreferrer noopener">appeal to nature fallacy</a>”. We don’t do things solely because they’re
+		as an “<a href="https://yourlogicalfallacyis.com/appeal-to-nature" target="_blank" rel="noreferrer noopener">appeal
+			to nature fallacy</a>”. We don’t do things solely because they’re
 		natural. We use
 		planes, cars, buildings, clothing, cutlery, cups, glasses, and an array
 		of things that are not natural. There are other natural things we avoid,
@@ -405,8 +417,8 @@ layout: default
 		natural. Killing animals when we don’t need to is unethical, period.</p>
 	<p class="permalink">
 		<a href="arguments/eating-animals-is-natural/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -421,8 +433,8 @@ layout: default
 	<p>This is still debated in the scientific community. There’s a
 		substantial amount of evidence pointing towards us being herbivores, or
 		at least scavengers (like rats, who eat meat after the animal’s been
-		killed by other predators). This <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1312295/"
-			target="_blank" rel="noreferrer noopener">article by William C. Roberts, MD</a> argues that humans must be
+		killed by other predators). This <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1312295/" target="_blank"
+			rel="noreferrer noopener">article by William C. Roberts, MD</a> argues that humans must be
 		plant eaters
 		because only herbivores develop atherosclerosis (hardening of the
 		arteries). Technically though, we’re omnivores by definition just
@@ -436,8 +448,8 @@ layout: default
 		up.</p>
 	<p class="permalink">
 		<a href="arguments/humans-are-omnivores/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -466,16 +478,17 @@ layout: default
 			href="https://www.youtube.com/watch?v=WO6Wd1i7eoM" target="_blank" rel="noreferrer noopener">sent to
 			slaughter while they are still babies</a>, with the unluckiest sent to <a
 			href="https://www.youtube.com/watch?v=cr5oyFSrZ9I" target="_blank" rel="noreferrer noopener">non-stun
-			slaughterhouses</a>. Pigs are suffocated in <a href="https://www.youtube.com/watch?v=ajWrCfqlbo8"
-			target="_blank" rel="noreferrer noopener">gas chambers</a> before having their throats cut, while little
+			slaughterhouses</a>. Pigs are suffocated in <a href="https://www.youtube.com/watch?v=ajWrCfqlbo8" target="_blank"
+			rel="noreferrer noopener">gas chambers</a> before having their throats cut, while little
 		<a href="https://www.youtube.com/watch?v=JoZ1_ZcpeLI" target="_blank" rel="noreferrer noopener">pigglets
 			have their tails docked and teeth clipped</a> without anaesthetic. Examples of the pain, suffering and
-		torture we subject innocent sentient animals to are endless. <br /></p>
+		torture we subject innocent sentient animals to are endless. <br />
+	</p>
 	<p>Is this how farmers treat their family?<br /></p>
 	<p class="permalink">
 		<a href="arguments/farmers-treat-their-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -493,8 +506,8 @@ layout: default
 		certain oppression and it is a small group of people that fight to change the status quo.</p>
 	<p class="permalink">
 		<a href="arguments/most-people-eat-meat/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -507,14 +520,14 @@ layout: default
 	<h4 id="our-ancestors-ate-meat">
 		Our ancestors ate meat</h4>
 	<p>Our ancestors did many things that we’d find disturbing, including <a
-			href="https://www.bbc.com/news/science-environment-32890697" target="_blank"
-			rel="noreferrer noopener">killing each other</a>, and don’t do many things we do today that improve our
+			href="https://www.bbc.com/news/science-environment-32890697" target="_blank" rel="noreferrer noopener">killing
+			each other</a>, and don’t do many things we do today that improve our
 		lives. Basing our ethics on cavemen is not going to take us very far. Our knowledge has improved, and our
 		ethical behaviour should improve accordingly.</p>
 	<p class="permalink">
 		<a href="arguments/our-ancestors-ate-meat/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -534,8 +547,8 @@ layout: default
 		consensual sex. This helped the human species evolve to where we are
 		today, we cannot then say that sexual violence is in any way acceptable.</p>
 	<p>In addition, most scientists agree that <em>it wasn’t meat</em>, but <a
-			href="https://www.smithsonianmag.com/science-nature/why-fire-makes-us-human-72989884/?no-ist"
-			target="_blank" rel="noreferrer noopener">cooking foods, that made our brains evolve</a>.
+			href="https://www.smithsonianmag.com/science-nature/why-fire-makes-us-human-72989884/?no-ist" target="_blank"
+			rel="noreferrer noopener">cooking foods, that made our brains evolve</a>.
 		This would explain why we’re the smartest animals and the only animals
 		that cook, while other more carnivorous animals like cats are less
 		intelligent than us. The hypothesis is that cooking allowed humans to
@@ -543,8 +556,8 @@ layout: default
 		chewing, which meant this extra energy helped fuel brain growth.</p>
 	<p class="permalink">
 		<a href="arguments/eating-meat-helped-us-evolve/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -565,8 +578,8 @@ layout: default
 		choose the former since it is the ethical choice.</p>
 	<p class="permalink">
 		<a href="arguments/eating-meat-is-healthy/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -589,8 +602,8 @@ layout: default
 		into existence.</p>
 	<p class="permalink">
 		<a href="arguments/farmed-animals-are-bred-to-be-killed/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -609,7 +622,8 @@ layout: default
 		<em>never</em> brought into this world to enjoy it, to live a natural life as nature intended. Farmed
 		animals are selectively bred and modified by humans to
 		be profitable. They suffer all kinds of health problems because they are
-		bred to be much bigger, faster growing or high-yielding compared to their natural ancestors.</p>
+		bred to be much bigger, faster growing or high-yielding compared to their natural ancestors.
+	</p>
 	<p>It is true that they may go extinct, continuing to
 		breed farm animals serves no logical purpose when there is no demand for their exploitation. Is this a bad
 		thing?</p>
@@ -637,8 +651,8 @@ layout: default
 		number of farm animals found in sanctuaries would most likely continue to exist.</p>
 	<p class="permalink">
 		<a href="arguments/farm-animals-would-go-extinct/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -656,8 +670,8 @@ layout: default
 		If we stop breeding them out of control, they wouldn’t overpopulate.</p>
 	<p class="permalink">
 		<a href="arguments/farmed-animals-would-overpopulate/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -674,8 +688,8 @@ layout: default
 		breeding and eating them in the first place.</p>
 	<p class="permalink">
 		<a href="arguments/farmed-animals-would-be-killed-in-the-wild/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -699,8 +713,8 @@ layout: default
 		right to life because they’re sentient.</p>
 	<p class="permalink">
 		<a href="arguments/animals-dont-understand-morality/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -718,8 +732,8 @@ layout: default
 		use it to justify eating cats, lions and bears, that <em>could</em>.</p>
 	<p class="permalink">
 		<a href="arguments/animals-would-eat-you-if-they-could/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -752,8 +766,8 @@ layout: default
 		us.</p>
 	<p class="permalink">
 		<a href="arguments/humans-are-superior-to-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -772,8 +786,8 @@ layout: default
 		for an animal product we’re indicating we want more of it.</p>
 	<p class="permalink">
 		<a href="arguments/the-animals-are-already-dead/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -792,8 +806,8 @@ layout: default
 		parts into household items.</p>
 	<p class="permalink">
 		<a href="arguments/i-eat-every-part-of-the-animal-so-they-dont-go-to-waste/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -817,8 +831,8 @@ layout: default
 		animals and the environment, both of which are God’s creations.</p>
 	<p class="permalink">
 		<a href="arguments/god-put-animals-here-to-eat/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -864,8 +878,8 @@ layout: default
 	</ul>
 	<p class="permalink">
 		<a href="arguments/the-dairy-industry-doesnt-harm-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -896,8 +910,8 @@ layout: default
 		years of age. The natural lifespan of a chicken is eight years.</p>
 	<p class="permalink">
 		<a href="arguments/the-egg-industry-doesnt-harm-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -926,8 +940,8 @@ layout: default
 		is only for the best.</p>
 	<p class="permalink">
 		<a href="arguments/people-would-lose-their-jobs/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -973,8 +987,8 @@ layout: default
 		happening is to end animal agriculture altogether.</p>
 	<p class="permalink">
 		<a href="arguments/its-legal-to-eat-animal-products-there-are-laws-to-protect-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1004,8 +1018,8 @@ layout: default
 		oppression, including animal oppression.</p>
 	<p class="permalink">
 		<a href="arguments/you-buy-products-from-sweatshops/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1032,8 +1046,8 @@ layout: default
 		not good ethical role models.</p>
 	<p class="permalink">
 		<a href="arguments/animals-eat-other-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1056,8 +1070,8 @@ layout: default
 		world, then we need to begin by becoming part of the group.</p>
 	<p class="permalink">
 		<a href="arguments/going-vegan-doesnt-make-a-difference/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1077,8 +1091,8 @@ layout: default
 		ethical regardless of what others do.</p>
 	<p class="permalink">
 		<a href="arguments/the-whole-world-will-never-go-vegan/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1097,8 +1111,8 @@ layout: default
 		meet some arbitrary requirements to earn that title.</p>
 	<p class="permalink">
 		<a href="arguments/i-only-buy-locally-grown-free-range-organic-meat/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1122,8 +1136,8 @@ layout: default
 		something as trivial as a sandwich filling.</p>
 	<p class="permalink">
 		<a href="arguments/humane-slaughter/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1142,8 +1156,8 @@ layout: default
 		sentient being for our own pleasure is immoral.</p>
 	<p class="permalink">
 		<a href="arguments/animal-products-are-tasty/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1169,8 +1183,8 @@ layout: default
 			will always be greater than our desire to eat a steak, and deep down we all know this.</em></p>
 	<p class="permalink">
 		<a href="arguments/vegan-food-is-tasteless/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1187,8 +1201,8 @@ layout: default
 		unnecessary pleasures. Our personal choice ends where someone else’s choices begin.</p>
 	<p class="permalink">
 		<a href="arguments/personal-choice/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1207,8 +1221,8 @@ layout: default
 		counter-example is the best we can do.</p>
 	<p class="permalink">
 		<a href="arguments/vegans-are-judgmental/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1236,8 +1250,8 @@ layout: default
 		unnecessarily (we don’t need to eat them to live healthily) is wrong.</p>
 	<p class="permalink">
 		<a href="arguments/morality-is-subjective/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1258,8 +1272,8 @@ layout: default
 		decide to stop paying industries that harm animals right now.</p>
 	<p class="permalink">
 		<a href="arguments/not-everyone-can-be-vegan/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1281,8 +1295,8 @@ layout: default
 		human oppression.</p>
 	<p>It is also worth putting the animal suffering problem into perspective. Worldwide, <a
 			href="https://www.animalequality.net/food" target="_blank" rel="noreferrer noopener">56 billion land
-			animals</a> are killed every year for food. Animal agriculture is the <a
-			href="https://www.cowspiracy.com/facts/" target="_blank" rel="noreferrer noopener">leading cause of
+			animals</a> are killed every year for food. Animal agriculture is the <a href="https://www.cowspiracy.com/facts/"
+			target="_blank" rel="noreferrer noopener">leading cause of
 			species extinction, ocean dead zones, water pollution, greenhouse gas emissions and Amazon
 			deforestation</a>.
 		Nowhere in the world are humans being exploited in the magnitude and
@@ -1291,9 +1305,8 @@ layout: default
 	<p>Also, in many cases, animal abuse can cause human suffering.
 		High meat and dairy diets are responsible for some of the United States’
 		leading killers, like heart disease and strokes. In areas where new
-		slaughterhouses are set up, the <a
-			href="http://animalstudies.msu.edu/Slaughterhouses_and_Increased_Crime_Rates.pdf" target="_blank"
-			rel="noreferrer noopener">rates of domestic violence and crime increase</a>.
+		slaughterhouses are set up, the <a href="http://animalstudies.msu.edu/Slaughterhouses_and_Increased_Crime_Rates.pdf"
+			target="_blank" rel="noreferrer noopener">rates of domestic violence and crime increase</a>.
 		Many human rights violations occur in factory farms because of the high
 		production rate required to meet the demand for meat. For example, <a
 			href="https://www.oxfamamerica.org/static/media/files/No_Relief_Embargo.pdf" target="_blank"
@@ -1305,8 +1318,8 @@ layout: default
 		solving human rights violations?</p>
 	<p class="permalink">
 		<a href="arguments/more-important-issues/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1344,8 +1357,8 @@ layout: default
 		many more plants to animals to then eat ourselves.</p>
 	<p class="permalink">
 		<a href="arguments/plants-feel-pain/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1363,8 +1376,8 @@ layout: default
 		avoiding direct harm, making ethical choices where possible, etc.</p>
 	<p>However, an argument <em>against veganism</em> that uses this claim is in fact an argument several times
 		stronger <em>in favour of veganism</em>.</p>
-	<p>At <a href="https://en.wikipedia.org/wiki/World_population" target="_blank"
-			rel="noreferrer noopener">almost eight billion people</a> the consumption demands require by our global
+	<p>At <a href="https://en.wikipedia.org/wiki/World_population" target="_blank" rel="noreferrer noopener">almost eight
+			billion people</a> the consumption demands require by our global
 		population is increased several times over by the need to feed <a
 			href="https://faunalytics.org/global-animal-slaughter-statistics-and-charts/" target="_blank"
 			rel="noreferrer noopener">70 billion farmed animals</a>
@@ -1377,11 +1390,12 @@ layout: default
 		who do not require grain, soy or other mass produced feed, therefore not killing small animals in crop
 		harvests. Not only is this impractical and unsustainable on a large scale, it is inherently
 		<em>elitist</em><em>.</em> There simply is not enough space available in the world to feed billions of
-		people on grass fed animals.</p>
+		people on grass fed animals.
+	</p>
 	<p class="permalink">
 		<a href="arguments/animals-die-in-crop-harvesting/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1411,8 +1425,8 @@ layout: default
 		again, whereas animal products require animal deaths every time.</p>
 	<p class="permalink">
 		<a href="arguments/medication-is-tested-on-animals/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1437,8 +1451,8 @@ layout: default
 		criminals should be avoided, why are we eating meat?</p>
 	<p class="permalink">
 		<a href="arguments/hitler-was-vegetarian/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1461,8 +1475,8 @@ layout: default
 		government subsidises the industry.</p>
 	<p class="permalink">
 		<a href="arguments/veganism-is-expensive/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1496,8 +1510,8 @@ layout: default
 			rel="noreferrer noopener">cowspiracy.com</a>.</p>
 	<p class="permalink">
 		<a href="arguments/veganism-is-unsustainable/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1512,9 +1526,9 @@ layout: default
 	<p>Protein is an incredibly bio-available nutrient. We can get all the
 		protein we want from plant sources without the potential health risks of
 		eating meat, dairy and eggs (some forms of cancer, diabetes, high blood
-		pressure, coronary heart disease, strokes, etc). The <a
-			href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/" target="_blank"
-			rel="noreferrer noopener">largest study ever done</a> on vegan nutrient profiles show vegans on average
+		pressure, coronary heart disease, strokes, etc). The <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/"
+			target="_blank" rel="noreferrer noopener">largest study ever done</a> on vegan nutrient profiles show vegans on
+		average
 		get <strong>almost the same amount of protein</strong> as non-vegans without supplementation (<a
 			href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/figure/F1/" target="_blank"
 			rel="noreferrer noopener">see Figure 1</a>).
@@ -1537,8 +1551,8 @@ layout: default
 			rel="noreferrer noopener">Why Protein Isn’t a Problem for Vegans By Matthew Chalmers</a>.</p>
 	<p class="permalink">
 		<a href="arguments/vegans-dont-get-enough-protein/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1569,8 +1583,8 @@ layout: default
 		would do any cow milk.</p>
 	<p class="permalink">
 		<a href="arguments/vegans-lack-calcium/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1595,11 +1609,10 @@ layout: default
 		following:</p>
 	<blockquote>“In strict vegetarians low dietary intakes of vitamin B12
 		and D, calcium, and omega-3 fatty acids, in addition to iron and zinc,
-		have often been of concern <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R25"
-				target="_blank" rel="noreferrer noopener">25</a></sup>. In the present study, mean intakes of these
-		nutrients were above minimum requirements <sup><a
-				href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R26" target="_blank"
-				rel="noreferrer noopener">26</a></sup> in strict vegetarians.”</blockquote>
+		have often been of concern <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R25" target="_blank"
+				rel="noreferrer noopener">25</a></sup>. In the present study, mean intakes of these
+		nutrients were above minimum requirements <sup><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/#R26"
+				target="_blank" rel="noreferrer noopener">26</a></sup> in strict vegetarians.”</blockquote>
 	<p>In <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4081456/table/T3/" target="_blank"
 			rel="noreferrer noopener">table 3</a>
 		of the same study, we can see vegans get 31.6mg of iron per day, and
@@ -1609,13 +1622,13 @@ layout: default
 		green vegetables. The type of iron found in meat (heme-iron) is the
 		type your body cannot regulate properly and forces its way into the
 		bloodstream. This encourages the production of <a
-			href="https://pharm.org/nutrition/a-double-edged-iron-sword-can-shorten-life-promote-alzheimers/"
-			target="_blank" rel="noreferrer noopener">free radicals, which can damage DNA and increase cancer
+			href="https://pharm.org/nutrition/a-double-edged-iron-sword-can-shorten-life-promote-alzheimers/" target="_blank"
+			rel="noreferrer noopener">free radicals, which can damage DNA and increase cancer
 			risk</a>. So it is safer as humans that we consume plant-based sources of iron (non-heme iron).</p>
 	<p class="permalink">
 		<a href="arguments/vegan-diet-lacks-iron/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1651,8 +1664,8 @@ layout: default
 		obtain the same B12? The former choice is clearly more desirable.</p>
 	<p class="permalink">
 		<a href="arguments/b12-is-only-found-in-meat/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1672,12 +1685,12 @@ layout: default
 	<p>A <a href="https://www.ncbi.nlm.nih.gov/pubmed/22079313" target="_blank" rel="noreferrer noopener">study by
 			Zeilmaker et al</a> looked at 33 fish species and its impact on brain development concluded that “for most
 		fish species the adverse effect of MeHg on the IQ score exceeded the beneficial effect of DHA.” Read more
-		about <a href="https://nutritionfacts.org/2014/11/04/how-seafood-can-impact-brain-development/"
-			target="_blank" rel="noreferrer noopener">why it's preferable to get omega-3 from plants</a>.</p>
+		about <a href="https://nutritionfacts.org/2014/11/04/how-seafood-can-impact-brain-development/" target="_blank"
+			rel="noreferrer noopener">why it's preferable to get omega-3 from plants</a>.</p>
 	<p class="permalink">
 		<a href="arguments/i-need-to-eat-fish-for-omega-3/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1696,8 +1709,8 @@ layout: default
 		and fortified cereals”.</p>
 	<p class="permalink">
 		<a href="arguments/vegans-lack-vitamin-d/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
@@ -1713,8 +1726,8 @@ layout: default
 		supplements are also an option.</p>
 	<p class="permalink">
 		<a href="arguments/iodine/">
-			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img"
-				xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg aria-hidden="true" focusable="false" width="13" height="13" role="img" xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 512 512">
 				<path fill="currentColor"
 					d="M314.222 197.78c51.091 51.091 54.377 132.287 9.75 187.16-6.242 7.73-2.784 3.865-84.94 86.02-54.696 54.696-143.266 54.745-197.99 0-54.711-54.69-54.734-143.255 0-197.99 32.773-32.773 51.835-51.899 63.409-63.457 7.463-7.452 20.331-2.354 20.486 8.192a173.31 173.31 0 0 0 4.746 37.828c.966 4.029-.272 8.269-3.202 11.198L80.632 312.57c-32.755 32.775-32.887 85.892 0 118.8 32.775 32.755 85.892 32.887 118.8 0l75.19-75.2c32.718-32.725 32.777-86.013 0-118.79a83.722 83.722 0 0 0-22.814-16.229c-4.623-2.233-7.182-7.25-6.561-12.346 1.356-11.122 6.296-21.885 14.815-30.405l4.375-4.375c3.625-3.626 9.177-4.594 13.76-2.294 12.999 6.524 25.187 15.211 36.025 26.049zM470.958 41.04c-54.724-54.745-143.294-54.696-197.99 0-82.156 82.156-78.698 78.29-84.94 86.02-44.627 54.873-41.341 136.069 9.75 187.16 10.838 10.838 23.026 19.525 36.025 26.049 4.582 2.3 10.134 1.331 13.76-2.294l4.375-4.375c8.52-8.519 13.459-19.283 14.815-30.405.621-5.096-1.938-10.113-6.561-12.346a83.706 83.706 0 0 1-22.814-16.229c-32.777-32.777-32.718-86.065 0-118.79l75.19-75.2c32.908-32.887 86.025-32.755 118.8 0 32.887 32.908 32.755 86.025 0 118.8l-45.848 45.84c-2.93 2.929-4.168 7.169-3.202 11.198a173.31 173.31 0 0 1 4.746 37.828c.155 10.546 13.023 15.644 20.486 8.192 11.574-11.558 30.636-30.684 63.409-63.457 54.733-54.735 54.71-143.3-.001-197.991z">
 				</path>
