@@ -1,6 +1,6 @@
-name: veganspeak
+name: vs
 type: php
-docroot:
+docroot: _site
 php_version: "8.1"
 webserver_type: nginx-fpm
 router_http_port: "80"
