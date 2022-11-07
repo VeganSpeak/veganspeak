@@ -1,0 +1,90 @@
+{%- set metaTitle -%}
+	{%- if not title -%}{{ site.title }}
+	{%- else -%}{{ title | safe }} | {{ site.title }}
+	{%- endif -%}
+{%- endset -%}
+
+{%- set metaDesc -%}
+	{%- if not description -%}{{ site.description | safe }}
+	{%- else -%}{{ description | safe }}
+	{%- endif -%}
+{%- endset -%}
+
+{%- set metaKeywords -%}
+	{%- if tags -%}{%- for tag in tags -%}{{ tag }},{%- endfor -%}{%- endif -%}
+	{%- if site.keywords -%}
+		{%- for keyword in site.keywords -%}
+			{{ keyword }}{%- if not loop.last %},{% endif -%}
+		{%- endfor -%}
+	{%- endif -%}
+{%- endset -%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>{{ metaTitle }}</title>
+    <meta name="title" content="{{ metaTitle }}">
+    <meta name="description" content="{{ metaDesc }}">
+    <meta name="keywords" content="{{ metaKeywords }}">
+
+    <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="{{ metaTitle }}">
+		<meta property="og:url" content="{{ site.url }}">
+		<meta property="og:title" content="{{ metaTitle }}">
+		<meta property="og:description"
+			content="{{ metaDesc }}">
+		<meta property="og:image" content="{{ '/assets/images/stop-eating-animals-go-vegan.jpg' | url }}">
+		<meta property="og:image:secure_url" content="{{ '/assets/images/stop-eating-animals-go-vegan.jpg' | url }}">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:locale" content="en">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="{{ metaTitle }}">
+		<meta name="twitter:description"
+			content="{{ metaDesc }}">
+		<meta name="twitter:url" content="{{ site.url }}">
+		<meta name="twitter:image" content="{{ '/media/_1024x512_crop_center-center_82_none/stop-eating-animals-go-vegan.jpg' | url }}">
+		<link rel="icon" href="/favicon.ico">
+		<link rel="icon" type="image/svg+xml" href="{{ '/assets/favicons/favicon.svg' | url }}">
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | url }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | url }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | url }}">
+		<link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | url }}">
+		<link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg" color="{{ site.theme }}' | url }}">
+		<meta name="apple-mobile-web-app-title" content="{{ metaTitle }}">
+		<meta name="application-name" content="{{ metaTitle }}">
+		<meta name="msapplication-TileColor" content="{{ site.theme }}">
+		<meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | url }}">
+
+		<meta name="theme-color" content="{{ site.theme }}" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="{{ site.darkTheme }}" media="(prefers-color-scheme: dark)">
+	</head>
+
+	<body>
+
+		<main class="wrapper">
+			{% include "partials/header.njk" %}
+
+			<section id="main-content">
+				{{ content | safe }}
+			</section>
+
+			{% include "partials/footer.njk" %}
+		</main>
+
+		<script async src="https://cdn.panelbear.com/analytics.js?site=8R0cA5Bk6wg"></script>
+		<script>window.panelbear = window.panelbear || function () { (window.panelbear.q = window.panelbear.q || []).push(arguments); }; panelbear('config', { site: '8R0cA5Bk6wg' });</script>
+
+	</body>
+</html>
