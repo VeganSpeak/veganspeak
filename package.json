@@ -2,7 +2,6 @@
   "name": "veganspeak-org",
   "version": "1.0.0",
   "description": "A source of and guide to vegan arguments",
-  "main": "index.html",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
