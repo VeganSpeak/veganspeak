@@ -1,15 +1,7 @@
-license.key
 /vendor
-/cpresources
-/web/cpresources
-/web/cpresources/*
 /yarn-error.log
 /npm-debug.log
 /node_modules
-/.sass-cache
-*.css.map
-*.sass.map
-*.scss.map
 
 # MISC FILES
 .env*
