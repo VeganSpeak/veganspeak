@@ -1,7 +1,8 @@
-/vendor
-/yarn-error.log
-/npm-debug.log
+/_site
 /node_modules
+/npm-debug.log
+/yarn-error.log
+/vendor
 
 # MISC FILES
 .env*
