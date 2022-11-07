@@ -1,6 +1,6 @@
 # Vegan Speak
 
-- 👋 Hi, this is Vegan Speak, a resource for vegan arguments and maybe more content in the future.
+👋 Hi, this is Vegan Speak, a resource for vegan arguments and maybe more content in the future.
 
 ## To Do
 
