@@ -4,7 +4,10 @@ layout: default
 
 <h2>{{ title }}</h2>
 
-<p><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></p>
+<ul>
+	<li><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></li>
+	<li><small><a href="https://github.com/VeganSpeak/veganspeak/blob/dev/{{ page.inputPath }}">Edit this page on GitHub</a></small></li>
+</ul>
 
 {{ content | safe }}
 
