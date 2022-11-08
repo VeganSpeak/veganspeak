@@ -1,10 +1,8 @@
 ---
-layout: post
+layout: default
 permalink: "/privacy-policy/index.html"
 title: "Privacy Policy"
 desciption: "Your privacy is important, we don't want it."
-created: 2022-11-07T20:51:22 (UTC +00:00)
-tags: [vegan arguments,animal rights,veganism,debunk veganism,speciesism,vegan ethics]
 ---
 
 # Privacy Policy
@@ -17,13 +15,13 @@ This policy is effective as of 13 March 2021 and was last updated on 7 November 
 
 Information we collect includes both information you knowingly and actively provide us when using or participating in any of our services and promotions, and any information automatically sent by your devices in the course of accessing our products and services.
 
-#### Log Data
+### Log Data
 
 When you visit our website, our servers may automatically log the standard data provided by your web browser. It may include your device’s Internet Protocol (IP) address, your browser type and version, the pages you visit, the time and date of your visit, other details about your visit, and technical details that occur in conjunction with any errors you may encounter.
 
 Please be aware that while this information may not be personally identifying by itself, it may be possible to combine it with other data to personally identify individual persons.
 
-#### Collection and Use of Information
+### Collection and Use of Information
 
 We may collect personal information from you when you do any of the following on our website:
 
@@ -32,13 +30,13 @@ We may collect personal information from you when you do any of the following on
 
 We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes:
 
-#### Security of Your Personal Information
+### Security of Your Personal Information
 
 When we collect and process personal information, and while we retain this information, we will protect it within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification.
 
 Although we will do our best to protect the personal information you provide to us, we advise that no method of electronic transmission or storage is 100% secure, and no one can guarantee absolute data security. We will comply with laws applicable to us in respect of any data breach.
 
-#### How Long We Keep Your Personal Information
+### How Long We Keep Your Personal Information
 
 We keep your personal information only for as long as we need to. This time period may depend on what we are using your information for, in accordance with this privacy policy. If your personal information is no longer required, we will delete it or make it anonymous by removing all details that identify you.
 
@@ -88,4 +86,4 @@ If required by law, we will get your permission or give you the opportunity to o
 
 ### Contact Us
 
-For any questions or concerns regarding your privacy, you may contact us using the following details: [\[email protected\]](https://vs.ddev.site/cdn-cgi/l/email-protection.html#e1978486808f929184808aa195949580cf888e)
+For any questions or concerns regarding your privacy, you may contact us using the following email: veganspeak@tuta.io
