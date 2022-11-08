@@ -7,10 +7,10 @@ pagination:
   filter:
     - all
 eleventyComputed:
-  title: "{{ topic | title }} arguments"
+  title: "{{ topic | title }} Arguments"
 permalink: /topics/{{ topic | slugify }}/
 ---
-<h1>{{ topic | title }}</h1>
+<h1>{{ title }}</h1>
 
 <ol>
 {% set topiclist = collections[ topic ] %}
