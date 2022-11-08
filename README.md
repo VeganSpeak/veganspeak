@@ -14,5 +14,5 @@
 - [ ] Add a code of conduct
 - [ ] Add a contributing guide
 -	[ ] Add a pull request template
-- [ ] Remove DDEV
+- [x] Remove DDEV
 - [x] Convert to 11ty
