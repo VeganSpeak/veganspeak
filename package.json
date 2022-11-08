@@ -7,7 +7,11 @@
     "build": "npm run clean && cross-env NODE_ENV=production eleventy",
     "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
     "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
-    "debug": "DEBUG=* npx @11ty/eleventy"
+    "debug": "DEBUG=* npx @11ty/eleventy",
+
+    "tw:dev": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css",
+    "tw:watch": "tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --watch",
+    "tw:build": "NODE_ENV=production tailwindcss --postcss -i ./src/tailwind/tailwind.css -o ./src/assets/css/main.css --minify"
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,12 @@
     "url": "https://github.com/VeganSpeak/veganspeak/issues"
   },
   "homepage": "https://github.com/VeganSpeak/veganspeak#readme",
+  "browserlisturl": "https://browserslist.dev",
+  "browserslist": [
+    "last 5 versions",
+    ">= 1%",
+    "not dead"
+  ],
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
