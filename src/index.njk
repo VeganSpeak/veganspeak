@@ -22,11 +22,11 @@ layout: default
 			<a href="{{ post.url | url }}">
 				{{ post.data.title }}
 			</a>
-			{# <p class="text-gray-800">
+			{# <p>
 				{% if post.data.description %}
 					{{ post.data.description }}
 				{% else %}
-					<small>{{ post.templateContent | striptags | truncate(160) }}</small>
+					<small>{{ post.templateContent|striptags|truncate(160) }}</small>
 				{% endif %}
 			</p> #}
 		</li>
@@ -37,16 +37,16 @@ layout: default
 <h3>All Arguments</h3>
 
 <ol>
-	{% for post in collections.arguments  | sort(false, false, 'data.order') %}
+	{% for post in collections.arguments|sort(false, false, 'data.order') %}
 		<li>
 			<a href="{{ post.url | url }}">
 				{{ post.data.title }}
 			</a>
-			{# <p class="text-gray-800">
+			{# <p>
 				{% if post.data.description %}
 					{{ post.data.description }}
 				{% else %}
-					<small>{{ post.templateContent | striptags | truncate(160) }}</small>
+					<small>{{ post.templateContent|striptags|truncate(160) }}</small>
 				{% endif %}
 			</p> #}
 		</li>
@@ -60,5 +60,5 @@ layout: default
 			Graisse (Merodrem)</a> and shared under a GNU General Public License. Vegan Speak is not affiliated with
 		any of the third party links, videos or information provided.</p>
 
-	<p><a href="privacy-policy/">Privacy Policy</a></p>
+	<p><a href="/privacy-policy/">Privacy Policy</a></p>
 </div>
