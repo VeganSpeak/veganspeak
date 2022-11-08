@@ -12,6 +12,12 @@ body {
 	height: 100%;
 }
 
+hr {
+	border: 0;
+	border-top: 1px solid rgba(200, 200, 200, 0.15);
+	margin-top: 2.25rem;
+}
+
 h1,
 h2,
 h3,
@@ -45,11 +51,6 @@ ol {
 	margin-bottom: 3rem;
 	padding-left: 2em;
 	font-size: 1.125rem
-}
-
-ol a,
-ul a {
-	display: block
 }
 
 ol li+li,
@@ -155,6 +156,12 @@ blockquote footer {
 	font-size: .872rem;
 	opacity: .75;
 	padding-top: 4rem
+}
+
+.post-footer {
+	margin: 2rem 0 1rem;
+	list-style: none;
+	padding-left: 0;
 }
 
 @media screen and (max-width:960px) {
