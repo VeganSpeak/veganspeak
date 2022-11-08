@@ -33,6 +33,15 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  // Add shortlink redirects
+  // https://www.raymondcamden.com/2021/06/22/dynamic-short-urls-with-eleventy
+  eleventyConfig.addCollection("goPages", collectionApi => {
+    return collectionApi.getAll().filter(p => {
+      if(p.data.go) return true;
+      return false;
+    });
+  });
+
   return {
     dir: {
       input: 'src',
