@@ -1,11 +1,23 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const { DateTime } = require("luxon");
+const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
+
+  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+    if (outputPath.endsWith(".html")) {
+      return htmlmin.minify(content, {
+        collapseWhitespace: true,
+        removeComments: true,
+        useShortDoctype: true,
+      });
+    }
+    return content;
+  });
 
   eleventyConfig.addPlugin(pluginRss);
 
