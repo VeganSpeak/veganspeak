@@ -4,6 +4,7 @@
   "description": "A source of and guide to vegan arguments",
   "scripts": {
     "build": "npx @11ty/eleventy",
+    "watch": "npx @11ty/eleventy --watch",
     "start": "npx @11ty/eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
