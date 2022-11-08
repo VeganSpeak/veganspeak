@@ -15,6 +15,8 @@
 
 ## Repo To Do
 
+- [ ] Cleanup Main branch
+- [ ] Switch from using Dev branch to Main
 - [ ] Add a code of conduct
 - [ ] Add a contributing guide
 -	[ ] Add a pull request template
