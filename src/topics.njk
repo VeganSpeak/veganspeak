@@ -6,6 +6,7 @@ pagination:
   alias: topic
   filter:
     - all
+    - gopages
 eleventyComputed:
   title: "{{ topic | title }} Arguments"
 permalink: /topics/{{ topic | slugify }}/
