@@ -1,0 +1,9 @@
+@import "tailwindcss/base";
+
+@import "base";
+@import "typography";
+@import "spacer";
+@import "iphone";
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

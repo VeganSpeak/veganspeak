@@ -1,0 +1,49 @@
+/* Calculate fluid sizing with https://min-max-calculator.9elements.com */
+/* It's clamped to a min viewport of 320px and a max of 1280px */
+
+@layer utilities {
+	/* Various horizontal spacer classes typically used on sections of content */
+
+	/* @apply py-8 md:py-12 lg:py-16; */
+	.spacer,
+	.spacer-t {
+		padding-top: clamp(theme('spacing.8'), 1.333rem + 3.33vw, theme('spacing.16'));
+	}
+	.spacer,
+	.spacer-b {
+		padding-bottom: clamp(theme('spacing.8'), 1.333rem + 3.33vw, theme('spacing.16'));
+	}
+
+
+	/* @apply py-4 md:py-6 lg:py-8; */
+	.spacer-sm,
+	.spacer-t-sm {
+		padding-top: clamp(theme('spacing.4'), 0.667rem + 1.67vw, theme('spacing.8'));
+	}
+	.spacer-sm,
+	.spacer-b-sm {
+		padding-bottom: clamp(theme('spacing.4'), 0.667rem + 1.67vw, theme('spacing.8'));
+	}
+
+
+	/* @apply py-16 md:py-24 lg:py-32; */
+	.spacer-lg,
+	.spacer-t-lg {
+		padding-top: clamp(theme('spacing.16'), 2.667rem + 6.67vw, theme('spacing.32'));
+	}
+	.spacer-lg,
+	.spacer-b-lg {
+		padding-bottom: clamp(theme('spacing.16'), 2.667rem + 6.67vw, theme('spacing.32'));
+	}
+
+
+	/* 128px min and 256px max : pt-32 pt-64 */
+	.spacer-xl,
+	.spacer-t-xl {
+		padding-top: clamp(theme('spacing.32'), 5.333rem + 13.33vw, theme('spacing.64'));
+	}
+	.spacer-xl,
+	.spacer-b-xl {
+		padding-bottom: clamp(theme('spacing.32'), 5.333rem + 13.33vw, theme('spacing.64'));
+	}
+}

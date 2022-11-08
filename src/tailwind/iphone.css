@@ -1,0 +1,12 @@
+@layer utilities {
+	/* Left and Right padding for iPhones, this pushes content in and away from the notch */
+	.safe-area-x {
+		padding-left: env(safe-area-inset-left);
+		padding-right: env(safe-area-inset-right);
+	}
+
+	/* Adds extra padding for iPhones to avoid the UI bar at the bottom */
+	.safe-area-bottom {
+		padding-bottom: env(safe-area-inset-bottom);
+	}
+}

@@ -1,0 +1,35 @@
+@layer components {
+	/* Tweak and style the typography class with brand colours and settings */
+	.prose-brand :is(:where(h1, h2, h3, h4, th):not(:where([class~="not-prose"] *))) {
+		margin-top: theme('spacing.2') /* 8px */;
+		margin-bottom: theme('spacing.2') /* 8px */;
+	}
+
+	.prose-brand :is(:where(a):not(:where([class~="not-prose"] *))) {
+		transition-property: color, border-color, background-color, text-decoration-color;
+		transition-duration: 300ms;
+		text-decoration-line: underline;
+		text-underline-offset: 2px;
+		text-decoration-color: theme('colors.primary.200');
+	}
+
+	.prose-brand :is(:where(a):not(:where([class~="not-prose"] *))):hover {
+		color: theme('colors.primary.600');
+		text-decoration-color: theme('colors.primary.600');
+	}
+
+	/* Correct the aspect ratio of videos and iframes within the typography area */
+	.prose :where(iframe):not(:where([class~="not-prose"] *)) {
+		aspect-ratio: theme('aspectRatio.video');
+		height: auto;
+		width: 100%;
+	}
+}
+
+@layer utilities {
+	/* Style the first paragraph larger than the others */
+	.has-lead > p:first-of-type {
+		font-size: 125%;
+		line-height: 1.5
+	}
+}
