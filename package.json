@@ -4,9 +4,9 @@
   "description": "A source of and guide to vegan arguments",
   "scripts": {
     "clean": "rimraf _site",
-    "build": "npm run clean && npx @11ty/eleventy",
-    "watch": "npm run clean && npx @11ty/eleventy --watch",
-    "start": "npm run clean && npx @11ty/eleventy --serve",
+    "build": "npm run clean && cross-env NODE_ENV=production eleventy",
+    "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
+    "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "cross-env": "^7.0.3",
     "luxon": "^3.1.0",
     "rimraf": "^3.0.2"
   }
