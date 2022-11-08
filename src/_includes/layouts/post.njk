@@ -6,4 +6,11 @@ layout: default
 
 {{ content | safe }}
 
+{# <p>
+	{%- for tag in tags | filterTagList %}
+		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+		<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+	{%- endfor %}
+</p> #}
+
 <p><a href="/">← Return to all arguments</a></p>
