@@ -4,6 +4,8 @@
 
 ## To Do
 
+- [ ] Convert to Tailwind
+- [ ] New design
 - [ ] Correct the argument order
 - [ ] Add argument pagination
 - [ ] Add argument search
