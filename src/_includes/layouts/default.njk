@@ -10,15 +10,6 @@
 	{%- endif -%}
 {%- endset -%}
 
-{%- set metaKeywords -%}
-	{%- if tags -%}{%- for tag in tags -%}{{ tag }},{%- endfor -%}{%- endif -%}
-	{%- if site.keywords -%}
-		{%- for keyword in site.keywords -%}
-			{{ keyword }}{%- if not loop.last %},{% endif -%}
-		{%- endfor -%}
-	{%- endif -%}
-{%- endset -%}
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -31,7 +22,6 @@
     <title>{{ metaTitle }}</title>
     <meta name="title" content="{{ metaTitle }}">
     <meta name="description" content="{{ metaDesc }}">
-    <meta name="keywords" content="{{ metaKeywords }}">
 
     <link rel="canonical" href="{{ site.url | url }}{{ page.url }}">
 
