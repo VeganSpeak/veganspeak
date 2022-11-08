@@ -17,7 +17,7 @@ layout: default
 <h3>Trending Arguments</h3>
 
 <ul>
-	{% for post in collections.popular %}
+	{% for post in collections.popular | sort(false, false, 'data.trendOrder') %}
 		<li>
 			<a href="{{ post.url | url }}">
 				{{ post.data.title }}
@@ -37,7 +37,7 @@ layout: default
 <h3>All Arguments</h3>
 
 <ol>
-	{% for post in collections.arguments %}
+	{% for post in collections.arguments  | sort(false, false, 'data.order') %}
 		<li>
 			<a href="{{ post.url | url }}">
 				{{ post.data.title }}
