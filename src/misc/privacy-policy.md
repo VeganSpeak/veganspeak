@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: "/privacy-policy/index.html"
 title: "Privacy Policy"
 desciption: "Your privacy is important, we don't want it."
 created: 2022-11-07T20:51:22 (UTC +00:00)
@@ -10,9 +11,7 @@ tags: [vegan arguments,animal rights,veganism,debunk veganism,speciesism,vegan e
 
 Your privacy is important, we do not actively seek to collect any information about visitors to our website. It is Vegan Speak's policy to respect your privacy and comply with any applicable law and regulation regarding any personal information we may collect about you, including across our website, veganspeak.org, and other sites we own and operate. In addition to this, we proactively aim to reduce the data collected of visitors and contributors to our website and server.
 
-**tl;dr : We don't want your information, we hate sites that intrude on privacy and aim never to do that. Vegan Speak does set a couple of technical cookies which are explained below, and we use [Panel Bear](https://panelbear.com/) for simple analytics which gives us insights on the website's traffic without invading the privacy of our visitors.**
-
-This policy is effective as of 13 March 2021 and was last updated on 13 March 2021.
+This policy is effective as of 13 March 2021 and was last updated on 7 November 2022.
 
 ### Information We Collect
 
@@ -76,16 +75,6 @@ If you believe that we have breached a relevant data protection law and wish to 
 ### Use of Cookies
 
 We do _not_ knowingly use cookies to collect information about you and your activity across our site, we actively aim to use as few cookies as possible. A cookie is a small piece of data that our website stores on your computer.
-
-At the current time only two cookies are used on our website:
-
--   \_\_cfduid
--   \_\_cf\_bm
--   \_\_cflb
-
-These cookies are used by our network provider [Cloudflare](https://cloudflare.com/) to maximise network resources, manage traffic, and protect websites from malicious traffic. Visit Cloudflare's [Understanding the Cloudflare Cookies](https://support.cloudflare.com/hc/en-us/articles/200170156-Understanding-the-Cloudflare-Cookies) page to learn more.
-
-Cloudflare will soon be [deprecating the \_\_cfduid cookie](https://blog.cloudflare.com/deprecating-cfduid-cookie/).
 
 ### Limits of Our Policy
 
