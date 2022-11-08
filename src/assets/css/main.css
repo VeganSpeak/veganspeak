@@ -29,19 +29,31 @@ p,
 pre,
 table,
 ul {
-	margin: 0 0 1rem
+	margin: 0 0 1rem 0
 }
 
-ol {
-	margin-bottom: 3rem;
+ol, ul {
 	font-size: 1.125rem
 }
 
-ol a {
+ul {
+	padding-left: 1.15em;
+}
+
+ol {
+	list-style: decimal-leading-zero;
+	margin-bottom: 3rem;
+	padding-left: 2em;
+	font-size: 1.125rem
+}
+
+ol a,
+ul a {
 	display: block
 }
 
-ol li+li {
+ol li+li,
+ul li+li {
 	padding-top: .25rem
 }
 
