@@ -1,13 +1,15 @@
 html {
 	scroll-behavior: smooth;
-	scroll-padding: 45px
+	scroll-padding: 45px;
+	height: 100%;
 }
 
 body {
 	background-color: #fff;
 	padding: 50px;
 	font: 400 1rem/1.5 system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-	color: #444
+	color: #444;
+	height: 100%;
 }
 
 h1,
@@ -79,7 +81,6 @@ a {
 	text-decoration-skip-ink: auto;
 	-webkit-text-decoration-thickness: 1px;
 	text-decoration-thickness: 1px;
-	transition: all .3s ease-in-out
 }
 
 a:focus,
@@ -182,71 +183,6 @@ blockquote footer {
 	body {
 		padding: 15px
 	}
-}
-
-.youtube-player,
-.youtube-player-eager {
-	position: relative;
-	padding-bottom: 56.25%;
-	height: 0;
-	overflow: hidden;
-	max-width: 100%;
-	margin-bottom: 1rem
-}
-
-.youtube-player iframe,
-.youtube-player-eager iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%
-}
-
-.youtube-player img {
-	object-fit: cover;
-	display: block;
-	left: 0;
-	bottom: 0;
-	margin: auto;
-	max-width: 100%;
-	width: 100%;
-	position: absolute;
-	right: 0;
-	top: 0;
-	border: none;
-	height: auto;
-	cursor: pointer;
-	-webkit-transition: .4s all;
-	-moz-transition: .4s all;
-	transition: .4s all
-}
-
-.youtube-player img:hover {
-	-webkit-filter: brightness(75%)
-}
-
-.youtube-player .play {
-	height: 72px;
-	width: 72px;
-	left: 50%;
-	top: 50%;
-	margin-left: -36px;
-	margin-top: -36px;
-	position: absolute;
-	background: url('https://i.imgur.com/TxzC70f.png') no-repeat;
-	cursor: pointer
-}
-
-.permalink a {
-	opacity: .5;
-	text-decoration: none;
-	transition: opacity .2s ease-in-out
-}
-
-.permalink a:hover,
-.permalink a:focus {
-	opacity: 1
 }
 
 .sr-only {
