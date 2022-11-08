@@ -14,10 +14,10 @@ layout: default
 		rel="noreferrer noopener">Every Argument Against Veganism DEBUNKED</a> by Benjamin McCormick and <a
 		href="https://veganfacts.info">veganfacts.info</a> for sharing their ideas and arguments.</p>
 
-<h3>Farming</h3>
+<h3>Trending Arguments</h3>
 
-<ol>
-	{% for post in collections.farming %}
+<ul>
+	{% for post in collections.popular %}
 		<li>
 			<a href="{{ post.url | url }}">
 				{{ post.data.title }}
@@ -31,47 +31,10 @@ layout: default
 			</p> #}
 		</li>
 	{% endfor %}
-</ol>
-
-<h3>Health</h3>
-<ol>
-	{% for post in collections.health %}
-		<li>
-			<a href="{{ post.url | url }}">
-				{{ post.data.title }}
-			</a>
-			{# <p class="text-gray-800">
-				{% if post.data.description %}
-					{{ post.data.description }}
-				{% else %}
-					<small>{{ post.templateContent | striptags | truncate(160) }}</small>
-				{% endif %}
-			</p> #}
-		</li>
-	{% endfor %}
-</ol>
+</ul>
 
 
-<h3>Ethics</h3>
-<ol>
-	{% for post in collections.ethics %}
-		<li>
-			<a href="{{ post.url | url }}">
-				{{ post.data.title }}
-			</a>
-			{# <p class="text-gray-800">
-				{% if post.data.description %}
-					{{ post.data.description }}
-				{% else %}
-					<small>{{ post.templateContent | striptags | truncate(160) }}</small>
-				{% endif %}
-			</p> #}
-		</li>
-	{% endfor %}
-</ol>
-
-
-<h3>All</h3>
+<h3>All Arguments</h3>
 
 <ol>
 	{% for post in collections.arguments %}
