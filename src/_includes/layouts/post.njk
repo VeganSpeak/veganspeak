@@ -4,6 +4,8 @@ layout: default
 
 <h2>{{ title }}</h2>
 
+<p><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></p>
+
 {{ content | safe }}
 
 {# <p>
@@ -12,5 +14,20 @@ layout: default
 		<a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 	{%- endfor %}
 </p> #}
+
+  {# {%- set nextPost = collections.arguments | getNextCollectionItem(page) %}
+	{%- if nextPost %}
+		<p>
+			Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+		</p>
+  {% endif %}
+
+	{%- set previousPost = collections.arguments | getPreviousCollectionItem(page) %}
+	{%- if previousPost %}
+		<p>
+			Previous:
+			<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+		</p>
+  {% endif %} #}
 
 <p><a href="/">← Return to all arguments</a></p>
