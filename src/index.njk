@@ -2,63 +2,44 @@
 layout: default
 ---
 
-<h2>The Vegan Arguments Guide</h2>
-<p>Thinking of going vegan, but not sure if it’s all just a fad? Are you already vegan, but have a hard time
-	replying to your non-vegan friends and family? Do you eat meat and believe veganism doesn’t make sense? Say no
-	more, and continue reading.</p>
-<p>Many people have compiled similar lists to this one, so I’d like to credit George Martin’s <a
-		href="https://www.carnismdebunked.com/general-ethical/" target="_blank" rel="noreferrer noopener">Carnism
-		Debunked</a>, Vegan Sidekick’s <a href="https://www.godfist.com/vegansidekick/guide.php" target="_blank"
-		rel="noreferrer noopener">Guide to justifications for harming and exploiting animals</a>, <a
-		href="https://vomadlife.com/blogs/news/every-argument-against-veganism-debunked" target="_blank"
-		rel="noreferrer noopener">Every Argument Against Veganism DEBUNKED</a> by Benjamin McCormick and <a
-		href="https://veganfacts.info">veganfacts.info</a> for sharing their ideas and arguments.</p>
+<h3 class="font-bold leading-none tracking-tight fl-text-6xl spacer-t-lg">Trending <span class="sr-only">Arguments</span></h3>
 
-<h3>Trending Arguments</h3>
-
-<ul>
+<ul class="grid gap-6 font-bold leading-tight sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 fl-text-xl spacer-t">
 	{% for post in collections.popular | sort(false, false, 'data.trendOrder') %}
-		<li>
-			<a href="{{ post.url | url }}">
+		<li class="pt-3 border-t-4 border-primary-600">
+			<a class="block h-full pb-2" href="{{ post.url | url }}">
 				{{ post.data.title }}
 			</a>
-			{# <p>
+			{# <p class="pt-4 text-base leading-snug text-zinc-800">
 				{% if post.data.description %}
 					{{ post.data.description }}
 				{% else %}
-					<small>{{ post.templateContent|striptags|truncate(160) }}</small>
+					{{ post.templateContent|striptags|truncate(160) }}
 				{% endif %}
 			</p> #}
 		</li>
 	{% endfor %}
 </ul>
 
+<h3 class="pb-4 font-bold leading-none tracking-tight border-b-4 fl-text-6xl spacer-t-lg border-primary-600">All Arguments</h3>
 
-<h3>All Arguments</h3>
-
-<ol>
-	{% for post in collections.arguments|sort(false, false, 'data.order') %}
+<ol class="space-y-2 text-lg spacer-t-sm">
+	{% for post in collections.arguments | sort(false, false, 'data.order') %}
 		<li>
 			<a href="{{ post.url | url }}">
 				{{ post.data.title }}
 			</a>
-			{# <p>
-				{% if post.data.description %}
-					{{ post.data.description }}
-				{% else %}
-					<small>{{ post.templateContent|striptags|truncate(160) }}</small>
-				{% endif %}
-			</p> #}
 		</li>
 	{% endfor %}
 </ol>
 
-
-<div class="footnote">
+<div class="prose spacer-t">
 	<p>Vegan Speak was originally published at veganspeak.org by Cesar Ferradas and later <a
-			href="https://github.com/merodrem/Vegan-Speak-Guide" target="_blank" rel="noreferrer noopener">Julien
-			Graisse (Merodrem)</a> and shared under a GNU General Public License. Vegan Speak is not affiliated with
-		any of the third party links, videos or information provided.</p>
+		href="https://github.com/merodrem/Vegan-Speak-Guide" target="_blank" rel="noreferrer noopener">Julien
+		Graisse (Merodrem)</a> and shared under a GNU General Public License. Vegan Speak is not affiliated with
+	any of the third party links, videos or information provided.</p>
 
-	<p><a href="/privacy-policy/">Privacy Policy</a></p>
+	<p>
+		<a href="/privacy-policy/">Privacy Policy</a>
+	</p>
 </div>

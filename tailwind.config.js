@@ -83,7 +83,6 @@ module.exports = {
         DEFAULT: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
       // Font sizes without line-height as that is set in the base layer as a fluid line height.
-      // See [1] for more info.
       fontSize: {
         xs: '0.75rem',
         sm: '0.875rem',
@@ -102,22 +101,22 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            '--tw-prose-body': theme('colors.body.DEFAULT'),
-            '--tw-prose-headings': theme('colors.body.DEFAULT'),
-            '--tw-prose-lead': theme('colors.body.DEFAULT'),
-            '--tw-prose-links': theme('colors.primary[500]'),
-            '--tw-prose-bold': theme('colors.body.DEFAULT'),
-            '--tw-prose-counters': theme('colors.grey[500]'),
-            '--tw-prose-bullets': theme('colors.primary[500]'),
-            '--tw-prose-hr': theme('colors.grey[300]'),
-            '--tw-prose-quotes': theme('colors.primary[500]'),
-            '--tw-prose-quote-borders': theme('colors.grey[300]'),
-            '--tw-prose-captions': theme('colors.grey[400]'),
-            '--tw-prose-code': theme('colors.body.DEFAULT'),
-            '--tw-prose-pre-code': theme('colors.body.DEFAULT'),
-            '--tw-prose-pre-bg': theme('colors.grey[50]'),
-            '--tw-prose-th-borders': theme('colors.grey[100]'),
-            '--tw-prose-td-borders': theme('colors.grey[100]'),
+            '--tw-prose-body': theme('colors.primary.700'),
+            '--tw-prose-headings': theme('colors.primary.600'),
+            '--tw-prose-lead': theme('colors.primary.700'),
+            '--tw-prose-links': theme('colors.primary.500'),
+            '--tw-prose-bold': theme('colors.primary.700'),
+            '--tw-prose-counters': theme('colors.primary.500'),
+            '--tw-prose-bullets': theme('colors.primary.500'),
+            '--tw-prose-hr': theme('colors.primary.600'),
+            '--tw-prose-quotes': theme('colors.primary.600'),
+            '--tw-prose-quote-borders': theme('colors.primary.600'),
+            '--tw-prose-captions': theme('colors.primary.600'),
+            '--tw-prose-code': theme('colors.primary.600'),
+            '--tw-prose-pre-code': theme('colors.primary.600'),
+            '--tw-prose-pre-bg': theme('colors.white'),
+            '--tw-prose-th-borders': theme('colors.primary.600'),
+            '--tw-prose-td-borders': theme('colors.primary.600'),
 
             '--tw-prose-invert-body': theme('colors.grey[200]'),
             '--tw-prose-invert-headings': theme('colors.white'),
@@ -186,11 +185,16 @@ module.exports = {
 
     // https://github.com/vivgui/tailwindcss-hyphens
     // require('@vivgui/tailwindcss-hyphens'),
-		// https://github.com/davidhellmann/tailwindcss-fluid-type
 
+		// https://github.com/davidhellmann/tailwindcss-fluid-type
 		require('tailwindcss-fluid-type')({
 			settings: {
-				prefix: 'fl-',
+				prefix: 'fl-', // set a prefix to use it alongside the default font sizes
+				ratioMin: 1.125, // Multiplicator Min
+				ratioMax: 1.2, // Multiplicator Max
+				screenMin: 20, // 20rem === 320px
+				screenMax: 96, // 96rem === 1536px
+				extendValues: true, // When you set extendValues to true it will extend the default values. Set it to false to overwrite the values.
 			},
 			// Font sizes without line-height as that is set in the base layer as a fluid line height.
 			values: {

@@ -2,9 +2,15 @@
 layout: default
 ---
 
-<h2>{{ title }}</h2>
+<header class="spacer-t-lg">
+	<div class="pt-4 border-t-4 border-primary-600">
+		<h2 class="max-w-screen-sm font-bold leading-none tracking-tight fl-text-6xl spacer-b">{{ title }}</h2>
+	</div>
+</header>
 
-{{ content | safe }}
+<div class="mx-auto prose lg:prose-lg spacer-b">
+	{{ content | safe }}
+</div>
 
 {# <p>
 	{%- for tag in tags | filterTagList %}
@@ -28,9 +34,7 @@ layout: default
 		</p>
   {% endif %} #}
 
-<hr>
-
-<footer class="post-footer">
+<footer class="pt-4 border-t-4 border-primary-600">
 	<li><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></li>
 	<li><small><a href="https://github.com/VeganSpeak/veganspeak/blob/dev/{{ page.inputPath }}">Edit this page on GitHub</a></small></li>
 </footer>
