@@ -31,7 +31,7 @@ layout: default
 {%- set nextPost = collections.arguments | getNextCollectionItem(page) %}
 
 <div class="max-w-screen-md pt-2 mx-auto text-lg border-t border-dotted lg:text-2xl border-primary-100">
-	<div class="grid {%- if previousPost %}grid-cols-3{% else %}grid-cols-2{% endif %} gap-8 py-2">
+	<div class="grid {% if previousPost %}grid-cols-3{% else %}grid-cols-2{% endif %} gap-8 py-2">
 		{%- if previousPost %}
 			<p>
 				<a class="block" href="{{ previousPost.url | url }}">
