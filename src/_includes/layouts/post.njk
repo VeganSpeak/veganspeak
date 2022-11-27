@@ -1,16 +1,87 @@
 ---
 layout: default
 ---
+{# {% if hero %}
+	<header class="spacer-t">
+		<img width="1280" height="420" class="relative -z-10" src="{{ hero }}&format=auto&fit=crop&w=1280&h=420&dpr=1.5&q=75&crop=center" alt="{{ heroAlt }}">
+		<!-- edges, entropy, faces -->
 
-<header class="spacer-t-lg">
-	<div class="pt-4 border-t-4 border-primary-600">
-		<h2 class="max-w-screen-sm font-bold leading-none tracking-tight fl-text-6xl spacer-b">{{ title }}</h2>
-	</div>
-</header>
+		<div class="max-w-screen-md mx-auto -mt-24 bg-white pt-14">
+			<h2 class="px-16 leading-none tracking-tight text-center fl-text-5xl spacer-b">{{ title }}</h2>
+		</div>
+	</header>
 
-<div class="mx-auto prose lg:prose-lg spacer-b">
+{% else %} #}
+
+	<header class="spacer-t">
+		<div class="max-w-screen-md pt-8 mx-auto bg-neutral-100">
+			<h2 class="px-16 font-medium leading-tight tracking-tight text-center fl-text-4xl spacer-b-sm">
+				{{ title }}
+			</h2>
+		</div>
+	</header>
+
+{# {% endif %} #}
+
+<div class="max-w-xl mx-auto prose xl:max-w-2xl sm:prose-xl xl:prose-2xl spacer">
 	{{ content | safe }}
 </div>
+
+{%- set previousPost = collections.arguments | getPreviousCollectionItem(page) %}
+{%- set nextPost = collections.arguments | getNextCollectionItem(page) %}
+
+<div class="max-w-screen-md pt-2 mx-auto text-lg border-t border-dotted lg:text-2xl border-primary-100">
+	<div class="grid grid-cols-{%- if previousPost %}3{% else %}2{% endif %} gap-8 py-2">
+		{%- if previousPost %}
+			<p class="grow">
+				<a class="block" href="{{ previousPost.url | url }}">
+					<span class="font-medium">Previous</span>
+					<span class="block text-base">{{ previousPost.data.title }}</span>
+				</a>
+			</p>
+		{% endif %}
+
+		<p class="grow"><a class="block{%- if previousPost %} text-center{% endif %}" href="/">All</a></p>
+
+		{%- if nextPost %}
+			<p class="text-right grow">
+				<a class="block" href="{{ nextPost.url | url }}">
+					<span class="font-medium">Next</span>
+					<span class="block text-base">{{ nextPost.data.title }}</span>
+				</a>
+			</p>
+		{% endif %}
+	</div>
+</div>
+
+
+<aside class="text-center not-prose spacer">
+	<div class="max-w-screen-md py-8 mx-auto bg-neutral-100">
+		<h3 class="mb-4">Sharing is caring</h3>
+		<ul class="flex items-center justify-center divide-x">
+			<li class="px-2">
+				<a href="https://twitter.com/intent/tweet?url={{ site.url | url }}/{{ page.fileSlug }}/&text={{ title }}"
+					title="Share on Twitter" target="_blank" rel="noopener noreferrer">
+					<span>Twitter</span>
+				</a>
+			</li>
+
+			<li class="px-2">
+				<a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url }}" title="Share on Facebook"
+					target="_blank" rel="noopener noreferrer">
+					<span>Facebook</span>
+				</a>
+			</li>
+
+			<li class="px-2">
+				<a href="https://reddit.com/submit?url={{ site.url | url }}/{{ page.fileSlug }}/&title={{ title }}"
+					title="Share on Reddit" target="_blank" rel="noopener noreferrer">
+					<span>Reddit</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</aside>
 
 {# <p>
 	{%- for tag in tags | filterTagList %}
@@ -19,24 +90,7 @@ layout: default
 	{%- endfor %}
 </p> #}
 
-  {# {%- set nextPost = collections.arguments | getNextCollectionItem(page) %}
-	{%- if nextPost %}
-		<p>
-			Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
-		</p>
-  {% endif %}
-
-	{%- set previousPost = collections.arguments | getPreviousCollectionItem(page) %}
-	{%- if previousPost %}
-		<p>
-			Previous:
-			<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
-		</p>
-  {% endif %} #}
-
-<footer class="pt-4 border-t-4 border-primary-600">
-	<li><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></li>
-	<li><small><a href="https://github.com/VeganSpeak/veganspeak/blob/dev/{{ page.inputPath }}">Edit this page on GitHub</a></small></li>
-</footer>
-
-<p><a href="/">← Return to all arguments</a></p>
+{# <footer class="max-w-screen-md pt-4 mx-auto border-t-4 border-primary-600 spacer-b">
+	<p><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></p>
+	<p><small><a href="https://github.com/VeganSpeak/veganspeak/blob/dev/{{ page.inputPath }}">Edit this page on GitHub</a></small></p>
+</footer> #}

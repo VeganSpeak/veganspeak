@@ -11,7 +11,7 @@
 {%- endset -%}
 
 <!DOCTYPE html>
-<html class="bg-[#fbf4eb] text-primary-600" lang="en" dir="ltr">
+<html class="bg-white text-primary-600" lang="en" dir="ltr">
 
 	<head>
     <meta charset="utf-8">
@@ -69,9 +69,9 @@
 			<section id="main-content">
 				{{ content | safe }}
 			</section>
-
-			{% include "partials/footer.njk" %}
 		</main>
+
+		{% include "partials/footer.njk" %}
 
 	</body>
 </html>
