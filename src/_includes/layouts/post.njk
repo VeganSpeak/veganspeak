@@ -36,7 +36,7 @@ layout: default
 			<p>
 				<a class="block" href="{{ previousPost.url | url }}">
 					<span class="font-medium">Previous</span>
-					<span class="block text-base">{{ previousPost.data.title }}</span>
+					<span class="block text-base leading-snug">{{ previousPost.data.title }}</span>
 				</a>
 			</p>
 		{% endif %}
@@ -47,7 +47,7 @@ layout: default
 			<p class="text-right">
 				<a class="block" href="{{ nextPost.url | url }}">
 					<span class="font-medium">Next</span>
-					<span class="block text-base">{{ nextPost.data.title }}</span>
+					<span class="block text-base leading-snug">{{ nextPost.data.title }}</span>
 				</a>
 			</p>
 		{% endif %}
