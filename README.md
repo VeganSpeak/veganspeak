@@ -4,20 +4,20 @@
 
 ## Website To Do
 
-- [ ] Convert to Tailwind
 - [ ] New design
-- [ ] Add argument pagination
+- [ ] Add argument filters
 - [ ] Add argument search
-- [ ] Add argument sorting/tags
+- [x] Convert to Tailwind
+- [x] Add argument pagination
 - [x] Correct the argument order
 - [x] Remove DDEV
 - [x] Convert to 11ty
 
 ## Repo To Do
 
-- [ ] Cleanup Main branch
-- [ ] Switch from using Dev branch to Main
 - [ ] Add a code of conduct
 - [ ] Add a contributing guide
 -	[ ] Add a pull request template
+- [x] Switch from using Dev branch to Main
+- [x] Cleanup Main branch
 - [x] Add a license
