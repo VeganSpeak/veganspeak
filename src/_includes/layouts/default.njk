@@ -11,7 +11,7 @@
 {%- endset -%}
 
 <!DOCTYPE html>
-<html class="bg-white text-primary-600" lang="en" dir="ltr">
+<html class="text-primary-600 bg-white" lang="en" dir="ltr">
 
 	<head>
     <meta charset="utf-8">
@@ -59,6 +59,12 @@
 
 		<meta name="theme-color" content="{{ site.theme }}" media="(prefers-color-scheme: light)">
 		<meta name="theme-color" content="{{ site.darkTheme }}" media="(prefers-color-scheme: dark)">
+
+		<script async src="https://rum.cronitor.io/script.js"></script>
+		<script>
+			window.cronitor = window.cronitor || function() { (window.cronitor.q = window.cronitor.q || []).push(arguments); };
+			cronitor('config', { clientKey: 'ae0f554e6c3e57872f04d22a18039846' });
+		</script>
 	</head>
 
 	<body>
