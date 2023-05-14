@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Meat and dairy tastes good"
+title: "Meat and dairy tastes good"
 tags:
  - arguments
  - diet
