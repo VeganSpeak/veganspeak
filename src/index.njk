@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<div class="max-w-screen-md mx-auto spacer">
-	<p class="p-8 prose bg-neutral-100 lg:prose-xl">
-		VSpeak is a collection of the most heard arguments against veganism. This is an open source work in progress and we welcome your <a href="https://github.com/VeganSpeak/veganspeak/" target="_blank" rel="noopener noreferrer">contributions or improvements</a>.
-	</p>
-	{# <h3 class="font-bold leading-none tracking-tight fl-text-2xl">Common Arguments</h3>
+<div class="spacer max-w-screen-md mx-auto">
 
-	<ul class="space-y-2 fl-text-lg spacer-t-sm spacer-b">
+<p class="bg-neutral-100 lg:prose-xl p-8 prose">
+	Vegan Speak is an ever growing resource addressing common misconceptions and arguments against veganism. Whether you’re a seasoned vegan or exploring the philosophy, Vegan Speak offers a wealth of information and resources to help you engage in meaningful conversations and make informed choices.
+</p>
+
+	{# <h3 class="fl-text-2xl font-bold leading-none tracking-tight">Common Arguments</h3>
+
+	<ul class="fl-text-lg spacer-t-sm spacer-b space-y-2">
 		{% for post in collections.popular | sort(false, false, 'data.trendOrder') %}
-			<li class="pb-2 border-b border-dotted border-primary-100">
+			<li class="border-primary-100 pb-2 border-b border-dotted">
 				<a class="block" href="{{ post.url | url }}">
 					{{ post.data.title }}
 				</a>
@@ -18,19 +20,23 @@ layout: default
 		{% endfor %}
 	</ul>
 
-	<h3 class="font-bold leading-none tracking-tight fl-text-2xl">All Arguments</h3> #}
+	<h3 class="fl-text-2xl font-bold leading-none tracking-tight">All Arguments</h3> #}
 
-	<ol class="space-y-2 fl-text-lg spacer">
+	<ol class="fl-text-lg spacer space-y-2">
 		{# {% for post in collections.arguments | sort(false, false, 'data.order') %} #}
 		{% for post in collections.arguments %}
-			<li class="pb-2 border-b border-dotted border-primary-100">
+			<li class="border-primary-100 pb-2 border-b border-dotted">
 				<a class="block" href="{{ post.url | url }}">
 					{% if post.data.trendOrder %}
-						<span class="pr-2 lg:-ml-9">★</span>
+						<span class="lg:-ml-9 pr-2">★</span>
 					{% endif %}
 					{{ post.data.title }}
 				</a>
 			</li>
 		{% endfor %}
 	</ol>
+
+	<p class="bg-neutral-100 lg:prose-xl p-8 prose">
+		This is an open source work in progress and we welcome your <a href="https://github.com/VeganSpeak/veganspeak/" target="_blank" rel="noopener noreferrer">contributions or improvements</a>.
+	</p>
 </div>
