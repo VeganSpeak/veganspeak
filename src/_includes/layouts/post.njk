@@ -3,19 +3,19 @@ layout: default
 ---
 {# {% if hero %}
 	<header class="spacer-t">
-		<img width="1280" height="420" class="relative -z-10" src="{{ hero }}&format=auto&fit=crop&w=1280&h=420&dpr=1.5&q=75&crop=center" alt="{{ heroAlt }}">
+		<img width="1280" height="420" class="-z-10 relative" src="{{ hero }}&format=auto&fit=crop&w=1280&h=420&dpr=1.5&q=75&crop=center" alt="{{ heroAlt }}">
 		<!-- edges, entropy, faces -->
 
-		<div class="max-w-screen-md mx-auto -mt-24 bg-white pt-14">
-			<h2 class="px-16 leading-none tracking-tight text-center fl-text-5xl spacer-b">{{ title }}</h2>
+		<div class="pt-14 max-w-screen-md mx-auto -mt-24 bg-white">
+			<h2 class="fl-text-5xl spacer-b px-16 leading-none tracking-tight text-center">{{ title }}</h2>
 		</div>
 	</header>
 
 {% else %} #}
 
 	<header class="spacer-t">
-		<div class="max-w-screen-md mx-auto bg-neutral-100">
-			<h2 class="px-16 font-medium leading-tight tracking-tight text-center fl-text-4xl spacer-sm">
+		<div class="bg-neutral-100 max-w-screen-md mx-auto">
+			<h2 class="fl-text-4xl spacer-sm px-16 font-medium leading-tight tracking-tight text-center">
 				{{ title }}
 			</h2>
 		</div>
@@ -23,14 +23,14 @@ layout: default
 
 {# {% endif %} #}
 
-<div class="max-w-xl mx-auto prose xl:max-w-2xl sm:prose-xl spacer">
+<div class="xl:max-w-2xl sm:prose-xl spacer max-w-xl mx-auto prose">
 	{{ content | safe }}
 </div>
 
 {%- set previousPost = collections.arguments | getPreviousCollectionItem(page) %}
 {%- set nextPost = collections.arguments | getNextCollectionItem(page) %}
 
-<div class="max-w-screen-md pt-2 mx-auto text-lg border-t border-dotted lg:text-2xl border-primary-100">
+<div class="lg:text-2xl border-primary-100 max-w-screen-md pt-2 mx-auto text-lg border-t border-dotted">
 	<div class="grid {% if previousPost %}grid-cols-3{% else %}grid-cols-2{% endif %} gap-8 py-2">
 		{%- if previousPost %}
 			<p>
@@ -55,8 +55,8 @@ layout: default
 </div>
 
 
-<aside class="text-center not-prose spacer">
-	<div class="max-w-screen-md py-8 mx-auto bg-neutral-100">
+<aside class="not-prose spacer text-center">
+	<div class="bg-neutral-100 max-w-screen-md py-8 mx-auto">
 		<h3 class="mb-4">Share this article to:</h3>
 		<ul class="flex items-center justify-center divide-x">
 			<li class="px-2">
@@ -90,7 +90,7 @@ layout: default
 	{%- endfor %}
 </p> #}
 
-{# <footer class="max-w-screen-md pt-4 mx-auto border-t-4 border-primary-600 spacer-b">
+{# <footer class="border-primary-600 spacer-b max-w-screen-md pt-4 mx-auto border-t-4">
 	<p><small>Share URL: <span class="copy-text">{{ site.url }}/go/{{ go }}</span></small></p>
 	<p><small><a href="https://github.com/VeganSpeak/veganspeak/blob/dev/{{ page.inputPath }}">Edit this page on GitHub</a></small></p>
 </footer> #}
