@@ -12,7 +12,7 @@ order: 280
 
 Choosing to consume animal products based on personal pleasure implies that unethical actions can be justified based on one’s personal pleasure. *Consider the implications of this carefully*. Harming another sentient being for our own pleasure is not only immoral, but perpetuates a culture of violence and disregard for the well-being of others.
 
-[Animals raised for food often experience immense physical and emotional suffering](https://watchdominion.org) leading up to and [during slaughtered](https://www.youtube.com/watch?v=rVR7NjnMkIc). Common animal farming include confining animals to unnaturally small spaces, depriving them of their natural behaviors and social interactions, and subjecting them to painful procedures without adequate pain relief.
+[Animals raised for food often experience immense physical and emotional suffering](https://watchdominion.org) leading up to and [during slaughter](https://www.youtube.com/watch?v=rVR7NjnMkIc). Common animal farming include confining animals to unnaturally small spaces, depriving them of their natural behaviors and social interactions, and subjecting them to painful procedures without adequate pain relief.
 
 > It is possible to make choices that prioritize both personal pleasure and ethical considerations.
 
