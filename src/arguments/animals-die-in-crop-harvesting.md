@@ -13,14 +13,19 @@ order: 350
 trendOrder: 2
 ---
 
-Animal deaths in crop harvesting are a fact of our current *non-vegan farming practices*, The aim of veganism is to avoid animal harm through practical solutions such as not supporting industries that exploit animals, avoiding direct harm, and making ethical choices where practicable. The [assumption that vegans can or must be perfect](../you-cant-be-100-vegan/) is not a vegan one.
+Animal deaths in crop harvesting is an unfortunate consequence of our current non-vegan farming practices. The aim of veganism is to avoid animal harm through practical solutions like not supporting industries that exploit animals, avoiding direct harm, and making ethical choices when possible. In fact, the argument that animals die in crop harvesting is a stronger case for veganism. This is because the consumption demand necessary to feed billions of farmed animals increases the need for crop harvesting and, thus, animal deaths.
 
-The argument that animals die in crop harvesting is in fact a stronger argument in favor of veganism, as the consumption demands required to feed billions of farmed animals increase the need for crop harvesting and thus animal deaths.
+> The accusation that vegans fail to be vegan because they cannot be perfect is an external one imposed by people who do not understand veganism.
+>
+> — [yourveganfallacyis.com](https://yourveganfallacyis.com/en/you-cannot-be-100-percent-vegan/resources)
 
-![Number of Animals Killed By Slaughter and Harvest in Eight Food Categories](https://d33wubrfki0l68.cloudfront.net/0a846af59c97ad4795f7a7f51987c9ae078bd06d/9ced5/images/charts/animals-killed-in-harvest.png)
+<figure>
+	<img src="https://d33wubrfki0l68.cloudfront.net/0a846af59c97ad4795f7a7f51987c9ae078bd06d/9ced5/images/charts/animals-killed-in-harvest.png" alt="Number of Animals Killed By Slaughter and Harvest in Eight Food Categories">
+<figcaption>Fig.1 - [Number of Animals Killed to Produce One Million Calories in Eight Food Categories](https://animalvisuals.org/projects/1mc/)</figcaption>
+</figure>
 
-Eating only grass-fed animals is impractical and unsustainable on a large scale and is inherently elitist, as it is not affordable or feasible for the majority of the global population.
+### Intention harm vs unintentional harm
 
-### Further Reading
+There is a clear distinction between the deaths of animals for plant production and deaths of animals in animal agriculture. Farmers who grow crops for human consumption often have no choice but to protect their crops from damage by pests and other animals in order to defend their livelihoods. While harm to animals may occur during the harvest of crops, **these farmers are not deliberately choosing to harm animals for profit or personal gain**. If given the chance, these farmers would likely farm their produce without hurting animals; the only way to achieve this is for more people to go vegan (especially farmers).
 
-[Number of Animals Killed to Produce One Million Calories in Eight Food Categories](https://animalvisuals.org/projects/1mc/)
+In contrast, animal agriculture is an industry intentionally breeds, exploits, and violently kills animals for profit. This involves a range of [cruel practices that cause immense suffering and harm to animals](https://animalequality.org/blog/2022/10/14/9-cruel-yet-legal-farming-practices/) and [the environment](https://www.surgeactivism.org/aveganworld). While animal farmers may also defend their livelihoods, their actions directly and intentionally harm animals, raising ethical issues not found in plant-based farming.
