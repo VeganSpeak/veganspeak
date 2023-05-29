@@ -21,7 +21,7 @@ Animal deaths in crop harvesting is an unfortunate consequence of our current no
 
 <figure>
 	<img src="https://d33wubrfki0l68.cloudfront.net/0a846af59c97ad4795f7a7f51987c9ae078bd06d/9ced5/images/charts/animals-killed-in-harvest.png" alt="Number of Animals Killed By Slaughter and Harvest in Eight Food Categories">
-<figcaption>Fig.1 - [Number of Animals Killed to Produce One Million Calories in Eight Food Categories](https://animalvisuals.org/projects/1mc/)</figcaption>
+<figcaption>Fig.1 - <a href="https://animalvisuals.org/projects/1mc/" target="_blank" rel="noopener noreferrer">Number of Animals Killed to Produce One Million Calories in Eight Food Categories</a></figcaption>
 </figure>
 
 ### Intention harm vs unintentional harm
